@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Img from "../public/bmw.png";
 import Image from "next/image";
+
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -10,6 +11,8 @@ export default function Home() {
   const [company, setCompany] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const [windowsize,setWindowsize]=useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,10 +27,22 @@ export default function Home() {
     });
   };
 
+  
+
+  window.addEventListener('resize', function() {
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    setWindowsize(windowWidth)
+    console.log(`Window height: ${windowHeight}px, Window width: ${windowWidth}px`);
+  });
+  
+
+ console.log("windowsize",windowsize);
+
   return (
-    <div class="min-h-screen min-w-full pt-20 pr-20 pl-20">
-      <div class="bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  rounded-10">
-        <div class="flex flex-row justify-between items-center gap-2.5 px-5 flex-wrap  pb-10 rounded-10  backdrop-blur bg-white/40">
+    <div class={`min-h-screen min-w-full ${ windowsize < 769 ? "":"pt-20 pr-20 pl-20"}`}>
+      <div class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${windowsize < 769 ? "":"rounded-10"}`}>
+        <div class={`flex flex-row justify-center lg:justify-between items-center px-5 flex-wrap pt-10  pb-10 ${windowsize < 769 ? "":"rounded-10"}  backdrop-blur bg-white/40`}>
           <div class="flex flex-col md:w-1/2 lg:w-1/2 gap-10">
             <h1 class="text-3xl">
               Message Us, we will be in <br /> touch shortly
@@ -45,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           <form>
-            <div class="space-y-12">
+            <div class="space-y-1">
               <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div class="sm:col-span-3">
                   <input
@@ -125,75 +140,75 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="flex flex-row justify-between items-center gap-2.5 flex-wrap pb-10 pt-10 rounded-10 mt-10">
-        <div class="bg-[url('../public/sampleimg.jpg')] bg-cover bg-center w-1/2 rounded-10">
-        <div class="backdrop-blur bg-white/40 p-10 rounded-10" >
-          <div class="flex flex-col gap-10 ">
-            <h1 class="text-3xl">Get in touch with us</h1>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not
-              only five centuries
-            </p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-x-4 gap-y-4 justify-content-start align-items-start">
-              <div class="max-w-xl  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
-                <div class="px-3 py-3">
-                  <h4 class="text-1xl font-bold">Custom Card</h4>
-                  <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                  <p class="text-sm text-gray-600">jakarta - indonesia</p>
+      <div class={`flex flex-row justify-center items-center ${windowsize < 769 ? "flex-wrap" :""}  gap-2.5 pb-10 pt-10  mt-10`}>
+        <div class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${windowsize < 769 ? "":"rounded-10"}`}>
+          <div class={`backdrop-blur bg-white/40 p-10 ${windowsize < 769 ? "":"rounded-10"}`}>
+            <div class="flex flex-col gap-10 ">
+              <h1 class="text-3xl">Get in touch with us</h1>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived
+                not only five centuries
+              </p>
+              <div class="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-x-4 gap-y-4 justify-content-center align-items-center">
+                <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div class="px-3 py-3">
+                    <h4 class="text-1xl font-bold">Custom Card</h4>
+                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                  </div>
                 </div>
-              </div>
-              <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
-                <div class="px-3 py-3">
-                  <h4 class="text-1xl font-bold">Custom Card</h4>
-                  <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                  <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div class="px-3 py-3">
+                    <h4 class="text-1xl font-bold">Custom Card</h4>
+                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                  </div>
                 </div>
-              </div>
-              <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
-                <div class="px-3 py-3">
-                  <h4 class="text-1xl font-bold">Custom Card</h4>
-                  <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                  <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div class="px-3 py-3">
+                    <h4 class="text-1xl font-bold">Custom Card</h4>
+                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                  </div>
                 </div>
-              </div>
-              <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
-                <div class="px-3 py-3">
-                  <h4 class="text-1xl font-bold">Custom Card</h4>
-                  <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                  <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div class="px-3 py-3">
+                    <h4 class="text-1xl font-bold">Custom Card</h4>
+                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                  </div>
                 </div>
-              </div>
-              <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
-                <div class="px-3 py-3">
-                  <h4 class="text-1xl font-bold">Custom Card</h4>
-                  <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                  <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div class="px-3 py-3">
+                    <h4 class="text-1xl font-bold">Custom Card</h4>
+                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                  </div>
                 </div>
-              </div>
-              <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
-                <div class="px-3 py-3">
-                  <h4 class="text-1xl font-bold">Custom Card</h4>
-                  <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                  <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div class="max-w-sm  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div class="px-3 py-3">
+                    <h4 class="text-1xl font-bold">Custom Card</h4>
+                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          </div>
         </div>
 
-        <div class="w-lg h-xl overflow-hidden">
+        <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9913671437953!2d78.13261867493121!3d8.786880091265118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sen!2sin!4v1722678364191!5m2!1sen!2sin"
             frameborder="0"
             border="0"
-            width="510px"
-            height="560px"
+            width={windowsize < 426 ? "100%" : "510"}
+            height={windowsize < 426 ? "100%" : "540"}
             aria-hidden="false"
             tabindex="0"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "10px" }}
           ></iframe>
         </div>
       </div>
