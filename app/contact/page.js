@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 // import Img from "../public/bmw.png";
-import Img from "../../public/bmw.png"
+import Img from "../../public/bmw.png";
 import Image from "next/image";
-
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -13,7 +12,7 @@ export default function Home() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const [windowsize,setWindowsize] = useState("");
+  const [windowsize, setWindowsize] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,22 +27,33 @@ export default function Home() {
     });
   };
 
-  
-
-  window.addEventListener('resize', function() {
+  window.addEventListener("resize", function () {
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
-    setWindowsize(windowWidth)
-    console.log(`Window height: ${windowHeight}px, Window width: ${windowWidth}px`);
+    setWindowsize(windowWidth);
+    console.log(
+      `Window height: ${windowHeight}px, Window width: ${windowWidth}px`
+    );
   });
-  
 
- console.log("windowsize",windowsize);
+  console.log("windowsize", windowsize);
 
   return (
-    <div class={`min-h-screen min-w-full ${ windowsize < 769 ? "":"pt-20 pr-20 pl-20"} mt-36`}>
-      <div class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${windowsize < 769 ? "":"rounded-10"}`}>
-        <div class={`flex flex-row justify-center lg:justify-between items-center px-5 flex-wrap pt-10  pb-10 ${windowsize < 769 ? "":"rounded-10"}  backdrop-blur bg-white/40`}>
+    <div
+      class={`min-h-screen min-w-full ${
+        windowsize < 769 ? "" : "pt-20 pr-20 pl-20"
+      } mt-36`}
+    >
+      <div
+        class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
+          windowsize < 769 ? "" : "rounded-10"
+        }`}
+      >
+        <div
+          class={`flex flex-row justify-center lg:justify-between items-center px-5 flex-wrap pt-10  pb-10 ${
+            windowsize < 769 ? "" : "rounded-10"
+          }  backdrop-blur bg-white/40`}
+        >
           <div class="flex flex-col md:w-1/2 lg:w-1/2 gap-10">
             <h1 class="text-3xl">
               Message Us, we will be in <br /> touch shortly
@@ -63,7 +73,11 @@ export default function Home() {
           <form onSubmit={handleSubmit}>
             <div class="space-y-1">
               <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                <div class="sm:col-span-3">
+                <div class="sm:col-span-3 flex gap-2">
+                  <select class="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                  </select>
                   <input
                     type="text"
                     name="name"
@@ -71,11 +85,14 @@ export default function Home() {
                     autocomplete="name"
                     placeholder="Name"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
+                    class="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                   />
                 </div>
 
-                <div class="sm:col-span-3">
+                <div class="sm:col-span-3 flex gap-2">
+                <select class="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
+                    <option>+91</option>                    
+                  </select>
                   <input
                     type="number"
                     name="phone"
@@ -147,10 +164,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div class={`flex flex-row justify-center items-center ${windowsize < 769 ? "flex-wrap" :""}  gap-2.5 pb-10 pt-10  mt-10`}>
-        <div class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${windowsize < 769 ? "":"rounded-10"}`}>
-          <div class={`backdrop-blur bg-white/40 p-10 ${windowsize < 769 ? "":"rounded-10"}`}>
-            <div class="flex flex-col gap-10 ">
+      <div
+        class={`flex flex-row justify-between items-center ${
+          windowsize < 769 ? "flex-wrap" : ""
+        }  gap-2.5 pb-10 pt-10  mt-10`}
+      >
+        <div
+          class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
+            windowsize < 769 ? "" : "rounded-10"
+          }`}
+        >
+          <div
+            class={`backdrop-blur bg-white/40 p-10 ${
+              windowsize < 769 ? "" : "rounded-10"
+            }`}
+          >
+            <div class="flex flex-col gap-10">
               <h1 class="text-3xl">Get in touch with us</h1>
               <p>
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -158,7 +187,7 @@ export default function Home() {
                 and scrambled it to make a type specimen book. It has survived
                 not only five centuries
               </p>
-              <div class="grid grid-cols-1 grid-rows-3 gap-x-4 gap-y-4 justify-items-center items-center">
+              <div class="grid grid-cols-1 grid-rows-3 gap-x-4 gap-y-4 justify-center items-center">
                 <div class="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
                   <div class="px-3 py-3">
                     <h4 class="text-1xl font-bold">Custom Card</h4>
@@ -180,7 +209,6 @@ export default function Home() {
                     <p class="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
