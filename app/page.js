@@ -59,7 +59,7 @@ export default function Home() {
               <Image src={Img} alt="hiii" width={24} height={24} />
             </div>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div class="space-y-1">
               <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div class="sm:col-span-3">
@@ -69,6 +69,7 @@ export default function Home() {
                     id="name"
                     autocomplete="name"
                     placeholder="Name"
+                    required
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -80,6 +81,7 @@ export default function Home() {
                     id="phone"
                     autocomplete="phone"
                     placeholder="Phone"
+                    required
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -91,6 +93,7 @@ export default function Home() {
                     type="email"
                     autocomplete="email"
                     placeholder="Email"
+                    required
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -101,6 +104,7 @@ export default function Home() {
                     type="text"
                     autocomplete="company"
                     placeholder="company"
+                    required
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -112,6 +116,7 @@ export default function Home() {
                     id="subject"
                     autocomplete="subject"
                     placeholder="Subject"
+                    required
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -122,6 +127,7 @@ export default function Home() {
                     name="message"
                     rows="3"
                     placeholder="Message"
+                    required
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   ></textarea>
                 </div>
