@@ -12,7 +12,7 @@ export default function Home() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const [windowsize,setWindowsize]=useState("");
+  const [windowsize,setWindowsize] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
