@@ -12,7 +12,7 @@ export default function Home() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const [windowsize, setWindowsize] = useState(window.innerWidth);
+  const [windowsize, setWindowsize] = useState(0);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,8 +27,7 @@ export default function Home() {
     });
   };
 
-
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener("resize", function () {
       const windowHeight = window.innerHeight;
       const windowWidth = window.innerWidth;
@@ -37,24 +36,20 @@ export default function Home() {
         `Window height: ${windowHeight}px, Window width: ${windowWidth}px`
       );
     });
-  },[])
-
- 
+  }, []);
 
   console.log("windowsize", windowsize);
 
   return (
-    <div
-      className="min-h-screen min-w-full pt-20 pr-20 pl-20 mt-30"
-    >
+    <div className="min-h-screen min-w-full pt-20 pr-20 pl-20 mt-16">
       <div
         className={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
-          windowsize < 769 ? "" : "rounded-10"
+          windowsize < 769 && windowsize !== 0 ? "" : "rounded-10"
         }`}
       >
         <div
           className={`flex flex-row justify-center lg:justify-between items-center px-5 flex-wrap pt-10  pb-10 ${
-            windowsize < 769 ? "" : "rounded-10"
+            windowsize < 769 && windowsize !== 0 ? "" : "rounded-10"
           }  backdrop-blur bg-white/40`}
         >
           <div className="flex flex-col md:w-1/2 lg:w-1/2 gap-10">
@@ -93,8 +88,8 @@ export default function Home() {
                 </div>
 
                 <div className="sm:col-span-3 flex gap-2">
-                <select className="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
-                    <option>+91</option>                    
+                  <select className="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
+                    <option>+91</option>
                   </select>
                   <input
                     type="number"
@@ -169,17 +164,17 @@ export default function Home() {
 
       <div
         className={`flex flex-row justify-between items-center ${
-          windowsize < 769 ? "flex-wrap" : ""
+          windowsize < 769 && windowsize !== 0 ? "flex-wrap" : ""
         }  gap-2.5 pb-10 pt-10  mt-10`}
       >
         <div
           className={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
-            windowsize < 769 ? "" : "rounded-10"
+            windowsize < 769 && windowsize !== 0 ? "" : "rounded-10"
           }`}
         >
           <div
             className={`backdrop-blur bg-white/40 p-10 ${
-              windowsize < 769 ? "" : "rounded-10"
+              windowsize < 769 && windowsize !== 0 ? "" : "rounded-10"
             }`}
           >
             <div className="flex flex-col gap-10">
@@ -194,21 +189,27 @@ export default function Home() {
                 <div className="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
                   <div className="px-3 py-3">
                     <h4 className="text-1xl font-bold">Custom Card</h4>
-                    <p className="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p className="text-sm text-gray-600">
+                      ji cempaka wangi no 22
+                    </p>
                     <p className="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
                 <div className="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
                   <div className="px-3 py-3">
                     <h4 className="text-1xl font-bold">Custom Card</h4>
-                    <p className="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p className="text-sm text-gray-600">
+                      ji cempaka wangi no 22
+                    </p>
                     <p className="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
                 <div className="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
                   <div className="px-3 py-3">
                     <h4 className="text-1xl font-bold">Custom Card</h4>
-                    <p className="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p className="text-sm text-gray-600">
+                      ji cempaka wangi no 22
+                    </p>
                     <p className="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
@@ -222,8 +223,8 @@ export default function Home() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9913671437953!2d78.13261867493121!3d8.786880091265118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sen!2sin!4v1722678364191!5m2!1sen!2sin"
             frameborder="0"
             border="0"
-            width={windowsize < 591 ? "100%" : "510"}
-            height={windowsize < 591 ? "100%" : "540"}
+            width={windowsize < 591 && windowsize !== 0 ? "100%" : "510"}
+            height={windowsize < 591 && windowsize !== 0 ? "100%" : "540"}
             aria-hidden="false"
             tabindex="0"
             style={{ borderRadius: "10px" }}
