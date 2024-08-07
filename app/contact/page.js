@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import Img from "../public/bmw.png";
+
 import Img from "../../public/bmw.png";
 import Image from "next/image";
 
@@ -59,7 +59,7 @@ export default function Home() {
               Message Us, we will be in <br /> touch shortly
             </h1>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
+              Lorem Ipsum has been the industrys standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
               scrambled it to make a type specimen book. It has survived not
               only five centuries
@@ -182,7 +182,7 @@ export default function Home() {
             <div class="flex flex-col gap-10">
               <h1 class="text-3xl">Get in touch with us</h1>
               <p>
-                Lorem Ipsum has been the industry's standard dummy text ever
+                Lorem Ipsum has been the industry s standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book. It has survived
                 not only five centuries
