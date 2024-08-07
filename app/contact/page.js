@@ -12,7 +12,7 @@ export default function Home() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const [windowsize, setWindowsize] = useState("");
+  const [windowsize, setWindowsize] = useState(window.innerWidth);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,9 +45,7 @@ export default function Home() {
 
   return (
     <div
-      className={`min-h-screen min-w-full ${
-        windowsize < 769 ? "" : "pt-20 pr-20 pl-20"
-      } mt-36`}
+      className="min-h-screen min-w-full pt-20 pr-20 pl-20 mt-30"
     >
       <div
         className={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
@@ -224,8 +222,8 @@ export default function Home() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9913671437953!2d78.13261867493121!3d8.786880091265118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sen!2sin!4v1722678364191!5m2!1sen!2sin"
             frameborder="0"
             border="0"
-            width={windowsize < 426 ? "100%" : "510"}
-            height={windowsize < 426 ? "100%" : "540"}
+            width={windowsize < 591 ? "100%" : "510"}
+            height={windowsize < 591 ? "100%" : "540"}
             aria-hidden="false"
             tabindex="0"
             style={{ borderRadius: "10px" }}
