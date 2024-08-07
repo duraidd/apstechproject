@@ -27,35 +27,40 @@ export default function Home() {
     });
   };
 
-  window.addEventListener("resize", function () {
-    const windowHeight = window.innerHeight;
-    const windowWidth = window.innerWidth;
-    setWindowsize(windowWidth);
-    console.log(
-      `Window height: ${windowHeight}px, Window width: ${windowWidth}px`
-    );
-  });
+
+  useEffect(()=>{
+    window.addEventListener("resize", function () {
+      const windowHeight = window.innerHeight;
+      const windowWidth = window.innerWidth;
+      setWindowsize(windowWidth);
+      console.log(
+        `Window height: ${windowHeight}px, Window width: ${windowWidth}px`
+      );
+    });
+  },[])
+
+ 
 
   console.log("windowsize", windowsize);
 
   return (
     <div
-      class={`min-h-screen min-w-full ${
+      className={`min-h-screen min-w-full ${
         windowsize < 769 ? "" : "pt-20 pr-20 pl-20"
       } mt-36`}
     >
       <div
-        class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
+        className={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
           windowsize < 769 ? "" : "rounded-10"
         }`}
       >
         <div
-          class={`flex flex-row justify-center lg:justify-between items-center px-5 flex-wrap pt-10  pb-10 ${
+          className={`flex flex-row justify-center lg:justify-between items-center px-5 flex-wrap pt-10  pb-10 ${
             windowsize < 769 ? "" : "rounded-10"
           }  backdrop-blur bg-white/40`}
         >
-          <div class="flex flex-col md:w-1/2 lg:w-1/2 gap-10">
-            <h1 class="text-3xl">
+          <div className="flex flex-col md:w-1/2 lg:w-1/2 gap-10">
+            <h1 className="text-3xl">
               Message Us, we will be in <br /> touch shortly
             </h1>
             <p>
@@ -64,17 +69,17 @@ export default function Home() {
               scrambled it to make a type specimen book. It has survived not
               only five centuries
             </p>
-            <div class="flex flex-row gap-1">
+            <div className="flex flex-row gap-1">
               <Image src={Img} alt="hiii" width={24} height={24} />
               <Image src={Img} alt="hiii" width={24} height={24} />
               <Image src={Img} alt="hiii" width={24} height={24} />
             </div>
           </div>
           <form onSubmit={handleSubmit}>
-            <div class="space-y-1">
-              <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                <div class="sm:col-span-3 flex gap-2">
-                  <select class="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
+            <div className="space-y-1">
+              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div className="sm:col-span-3 flex gap-2">
+                  <select className="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
                     <option>Mr.</option>
                     <option>Mrs.</option>
                   </select>
@@ -85,12 +90,12 @@ export default function Home() {
                     autocomplete="name"
                     placeholder="Name"
                     required
-                    class="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                    className="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                   />
                 </div>
 
-                <div class="sm:col-span-3 flex gap-2">
-                <select class="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
+                <div className="sm:col-span-3 flex gap-2">
+                <select className="block w-1/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6">
                     <option>+91</option>                    
                   </select>
                   <input
@@ -100,11 +105,11 @@ export default function Home() {
                     autocomplete="phone"
                     placeholder="Phone"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
 
-                <div class="sm:col-span-3">
+                <div className="sm:col-span-3">
                   <input
                     id="email"
                     name="email"
@@ -112,10 +117,10 @@ export default function Home() {
                     autocomplete="email"
                     placeholder="Email"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
-                <div class="sm:col-span-3">
+                <div className="sm:col-span-3">
                   <input
                     id="company"
                     name="company"
@@ -123,11 +128,11 @@ export default function Home() {
                     autocomplete="company"
                     placeholder="company"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
 
-                <div class="col-span-full">
+                <div className="col-span-full">
                   <input
                     type="text"
                     name="subject"
@@ -135,25 +140,25 @@ export default function Home() {
                     autocomplete="subject"
                     placeholder="Subject"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6"
                   />
                 </div>
 
-                <div class="col-span-full">
+                <div className="col-span-full">
                   <textarea
                     id="message"
                     name="message"
                     rows="3"
                     placeholder="Message"
                     required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   ></textarea>
                 </div>
 
-                <div class="mt-5 col-span-full">
+                <div className="mt-5 col-span-full">
                   <button
                     type="submit"
-                    class="rounded-md bg-custom-blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-custom-skyblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full"
+                    className="rounded-md bg-custom-blue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-custom-skyblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full"
                   >
                     Send Message
                   </button>
@@ -165,48 +170,48 @@ export default function Home() {
       </div>
 
       <div
-        class={`flex flex-row justify-between items-center ${
+        className={`flex flex-row justify-between items-center ${
           windowsize < 769 ? "flex-wrap" : ""
         }  gap-2.5 pb-10 pt-10  mt-10`}
       >
         <div
-          class={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
+          className={`bg-[url('../public/sampleimg.jpg')] bg-cover bg-center  ${
             windowsize < 769 ? "" : "rounded-10"
           }`}
         >
           <div
-            class={`backdrop-blur bg-white/40 p-10 ${
+            className={`backdrop-blur bg-white/40 p-10 ${
               windowsize < 769 ? "" : "rounded-10"
             }`}
           >
-            <div class="flex flex-col gap-10">
-              <h1 class="text-3xl">Get in touch with us</h1>
+            <div className="flex flex-col gap-10">
+              <h1 className="text-3xl">Get in touch with us</h1>
               <p>
                 Lorem Ipsum has been the industry s standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book. It has survived
                 not only five centuries
               </p>
-              <div class="grid grid-cols-1 grid-rows-3 gap-x-4 gap-y-4 justify-center items-center">
-                <div class="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
-                  <div class="px-3 py-3">
-                    <h4 class="text-1xl font-bold">Custom Card</h4>
-                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+              <div className="grid grid-cols-1 grid-rows-3 gap-x-4 gap-y-4 justify-center items-center">
+                <div className="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div className="px-3 py-3">
+                    <h4 className="text-1xl font-bold">Custom Card</h4>
+                    <p className="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p className="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
-                <div class="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
-                  <div class="px-3 py-3">
-                    <h4 class="text-1xl font-bold">Custom Card</h4>
-                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div className="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div className="px-3 py-3">
+                    <h4 className="text-1xl font-bold">Custom Card</h4>
+                    <p className="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p className="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
-                <div class="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
-                  <div class="px-3 py-3">
-                    <h4 class="text-1xl font-bold">Custom Card</h4>
-                    <p class="text-sm text-gray-600">ji cempaka wangi no 22</p>
-                    <p class="text-sm text-gray-600">jakarta - indonesia</p>
+                <div className="max-w  bg-blue-300 hover:bg-blue-100 rounded-2xl  overflow-hidden cursor-pointer hover:shadow-2xl">
+                  <div className="px-3 py-3">
+                    <h4 className="text-1xl font-bold">Custom Card</h4>
+                    <p className="text-sm text-gray-600">ji cempaka wangi no 22</p>
+                    <p className="text-sm text-gray-600">jakarta - indonesia</p>
                   </div>
                 </div>
               </div>

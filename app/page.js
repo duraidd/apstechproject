@@ -10,7 +10,7 @@ import styles from "../styles/Home.module.css";
 
 function Homepage() {
   const [isHovered, setIsHovered] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [windowSize, setWindowSize] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -122,7 +122,7 @@ function Homepage() {
                   fabric in the <br />
                   region with global compliance quality standards, also an
                   international price <br />
-                  competitor with best in class onshore delivery lead times.
+                  competitor with best in className onshore delivery lead times.
                   <br />
                 </span>
               </div>
@@ -213,136 +213,136 @@ function Homepage() {
             marginTop: "7%",
           }}
         >
-          <div class="rounded-[20px] bg-[url('../assets/images/frame_177.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat w-[832px] h-[532px]"></div>
+          <div className="rounded-[20px] bg-[url('../assets/images/frame_177.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat w-[832px] h-[532px]"></div>
         </div>
       </div>
 
       <div className="min-h-screen bg-white flex flex-row flex-wrap pt-20 pb-20 justify-center">
-        <div class="m-[0_78.5px_204px_82px] flex flex-col w-[fit-content] box-sizing-border">
+        <div className="m-[0_78.5px_204px_82px] flex flex-col w-[fit-content] box-sizing-border">
           <h1
             className={`${openSans.className} text-3xl md:text-2xl lg:text-3xl`}
           >
             We Spread <span className="text-orange-500">Around The World</span>
           </h1>
-          <div class="flex flex-col items-center w-[fit-content] box-sizing-border">
-            <div class="m-[0_0_35px_0] flex flex-row gap-[0_20.5px] w-[fit-content] box-sizing-border">
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_51.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0.4px_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+          <div className="flex flex-col items-center w-[fit-content] box-sizing-border">
+            <div className="m-[0_0_35px_0] flex flex-row gap-[0_20.5px] w-[fit-content] box-sizing-border">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_51.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0.4px_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       KNITTING
                     </span>
                   </div>
-                  <div class="rounded-[8px] flex box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] flex box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_511.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_17.6px_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_511.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_17.6px_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       DYEING
                     </span>
                   </div>
-                  <div class="rounded-[8px] flex box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] flex box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_514.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0.9px_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_514.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0.9px_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       PRINTING
                     </span>
                   </div>
-                  <div class="rounded-[8px] flex box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] flex box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_513.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_513.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       LABORATORY
                     </span>
                   </div>
-                  <div class="rounded-[8px] flex self-start box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] flex self-start box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-row gap-[0_20.5px] w-[fit-content] box-sizing-border">
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_512.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+            <div className="flex flex-row gap-[0_20.5px] w-[fit-content] box-sizing-border">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_512.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       FINISHING
                     </span>
                   </div>
-                  <div class="rounded-[8px] m-[0_4.3px_0_0] flex box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] m-[0_4.3px_0_0] flex box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_517.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_517.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       BRUSHING
                     </span>
                   </div>
-                  <div class="rounded-[8px] m-[0_6.5px_0_0] flex box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] m-[0_6.5px_0_0] flex box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_516.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+              <div className="flex flex-col box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_516.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_10px_0_10px] flex flex-col items-center self-start w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       SINGEING
                     </span>
                   </div>
-                  <div class="rounded-[8px] m-[0_0.9px_0_0] flex box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] m-[0_0.9px_0_0] flex box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col items-center box-sizing-border">
-                <div class="rounded-[16px] bg-[url('../assets/images/frame_515.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
-                <div class="m-[0_16px_0_10px] flex flex-col w-[fit-content] box-sizing-border">
-                  <div class="m-[0_0_24px_0] flex box-sizing-border">
-                    <span class="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
+              <div className="flex flex-col items-center box-sizing-border">
+                <div className="rounded-[16px] bg-[url('../assets/images/frame_515.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat m-[0_0_34px_0] w-[304.5px] h-[349px]"></div>
+                <div className="m-[0_16px_0_10px] flex flex-col w-[fit-content] box-sizing-border">
+                  <div className="m-[0_0_24px_0] flex box-sizing-border">
+                    <span className="break-words font-['Outfit'] font-medium text-[20px] text-[#000000]">
                       EFFIUENT TREATMENT PLANT
                     </span>
                   </div>
-                  <div class="rounded-[8px] flex self-start box-sizing-border">
-                    <span class="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
+                  <div className="rounded-[8px] flex self-start box-sizing-border">
+                    <span className="break-words font-['Open_Sans'] font-semibold text-[18px] text-[#FF5618]">
                       View more
                     </span>
                   </div>
@@ -353,22 +353,22 @@ function Homepage() {
         </div>
       </div>
 
-      <div class="pl-10 pr-10 pb-10 bg-white">
-        <div class="rounded-[12px] bg-[url('../assets/images/frame_74.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat relative flex flex-col p-[50px_0_50px_48px] w-full box-sizing-border">
-          <div class="rounded-[12px] bg-[rgba(15,15,15,0.3)] absolute left-[0px] top-[0px] right-[0px] bottom-[0px] h-[100%]"></div>
-          <div class="relative m-[0_0_114px_0] flex self-start box-sizing-border">
-            <span class="break-words font-['Outfit'] font-normal text-[48px] text-[#FFFFFF]">
+      <div className="pl-10 pr-10 pb-10 bg-white">
+        <div className="rounded-[12px] bg-[url('../assets/images/frame_74.jpeg')] bg-[50%_50%] bg-cover bg-no-repeat relative flex flex-col p-[50px_0_50px_48px] w-full box-sizing-border">
+          <div className="rounded-[12px] bg-[rgba(15,15,15,0.3)] absolute left-[0px] top-[0px] right-[0px] bottom-[0px] h-[100%]"></div>
+          <div className="relative m-[0_0_114px_0] flex self-start box-sizing-border">
+            <span className="break-words font-['Outfit'] font-normal text-[48px] text-[#FFFFFF]">
               Let’s Connect
             </span>
           </div>
-          <div class="relative m-[0_0_47px_0] flex self-start box-sizing-border">
-            <span class="break-words font-['Space_Grotesk'] font-medium text-[24px] text-[#FFFFFF]">
+          <div className="relative m-[0_0_47px_0] flex self-start box-sizing-border">
+            <span className="break-words font-['Space_Grotesk'] font-medium text-[24px] text-[#FFFFFF]">
               Join us on our journey to drive innovation, <br />
               shape the future of textiles, and make a lasting impact.
             </span>
           </div>
           
-          <div class="relative">
+          <div className="relative">
           <button
             className={
               "bg-orange-500 hover:bg-orange-400 text-white font-outfit rounded-full py-2 px-2 mt-5"
